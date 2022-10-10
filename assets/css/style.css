@@ -1,34 +1,52 @@
-.image-container{
-    background: url('../img/construction-03.jpg') center no-repeat;
+
+/*modulo de fondo de la pagina web*/
+
+.fondo{
+    background-image: url(../img/construction-03.jpg) ;
     background-size: cover;
-    height: 100vh;
-}
+    backdrop-filter: blur(05px);
+ }
+
+/*modulo de color y lugar en donde mover el formulario completo*/
 
 .form-container{
     background-color: #FFCC00;
-    display: flex;
+    display:flexbox;
     justify-content: center;
+    margin-left: 555px;
 }
+
+/*modulo de el movimiento del fomulario*/
 
 .form-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    margin-left: 145px;
+    
 }
+
+/*modulo de cambio de color y tipo de letra del titulo*/
 
 .form-box h4{
     font-weight: bold;
     color: #fff;
+    margin-left: 50px;
 }
+
+/*ESTE MODULO ES PARA EL LUGAR EN EL QUE SE COLOCAN LOS ICONOS DE USARIO Y CONSTRASEÑA*/
 
 .form-box .form-input {
     position: relative;
+    
 }
+
+/*modulo del diseño de las cajas de usuario y contraseña*/
 
 .form-box .form-input input{
     width: 110%;
-    height: 60px;
+    height: 90px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
@@ -37,6 +55,8 @@
     padding-left: 45px;
 }
 
+/*modulo de movimiento de los iconos de user y password*/
+
 .form-box .form-input span{
     position: absolute;
     top: 8px;
@@ -44,38 +64,51 @@
     color: #777;
 }
 
+/*modulo del posicionamiento del texto de correo y contraseña*/
+
 .form-box .form-input input::placeholder{
     padding-left: 0px;
 }
+
+/*modulo de sombreado de abajo de las cajas del login*/
 
 .form-box .form-input input:focus,
 .form-box .form-input input:valid{
     border-bottom: 2px solid #dc3545;
 }
 
+/*modulo de los bordes del recordar usuario*/
+
 .form-box input[type="checkbox"]:not(:checked) + label:before{
     background: transparent;
     border: 2px solid #fff;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
+
+/*modulo de cambio de color al dar click la caja de recordad usuario*/
 
 .form-box .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
     background-color: #dc3545;
     border: 0px;
 }
 
+/*modulo de configuracion del boton de ingresar*/
+
 .form-box button[type="submit"]{
     border: none;
     cursor: pointer;
-    width: 150px;
-    height: 40px;
+    width: 720px;
+    height: 66px;
     border-radius: 5px;
-    background-color: #fff;
-    color: #000;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     transition: 0.5s;
+    
 }
+
+/*modulo donde hace el somreado del boton de ingresar*/
 
 .form-box button[type="submit"]:hover{
     -webkit-box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.55);
@@ -83,44 +116,24 @@
     box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.55);
 }
 
+/*modulo donde se coloca el color blanco al texto de `olvido su contraseña`*/
+
 .forget-link, .register-link, .login-link{
     color: #fff;
     font-weight: bold;
 }
 
+/*modulo adjuntado con el de arriba en el cual al colocar el cursos sobre el texto cambia de color*/
+
 .forget-link:hover, .register-link:hover, .login-link:hover{
     color: #292525;
 }
 
-.form-box .btn-social{
-    color: #fff;
-    border: 0;
-    margin-bottom: 10px;
+.text-right{
+margin-left: 410px;
 }
 
-.form-box .btn-facebook{
-    background: #4866a8;
+.text-white1{
+    margin-left: 20px;
 }
 
-.form-box .btn-google{
-    background: #da3f34
-}
-
-.form-box .btn-twitter{
-    background: #33ccff;
-}
-
-.form-box .btn-facebook:hover{
-    color: #fff;
-    background: #3d5785;
-}
-
-.form-box .btn-google:hover{
-    background: #bf3b31;
-    color: #fff;
-}
-
-.form-box .btn-twitter:hover{
-    background: #2eb7e5;
-    color: #fff;
-}
