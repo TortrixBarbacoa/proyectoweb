@@ -1,11 +1,11 @@
 .image-container{
-    background: url('image/construction-03.jpg') center no-repeat;
+    background: url('../img/construction-03.jpg') center no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
 .form-container{
-    background-color: #120c01;
+    background-color: #FFCC00;
     display: flex;
     justify-content: center;
 }
