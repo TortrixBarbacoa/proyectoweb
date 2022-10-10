@@ -1,0 +1,37 @@
+
+/* Fuentes */
+h1{
+  font-family: "Lato";
+  font-size: 37px;  
+}
+
+h2{
+  font-family: "Rubik";
+}
+
+h3{
+  font-family: "Poppins";
+}
+/* Fuentes */
+
+li{
+  list-style-type: none;
+}
+
+/* Navbar */
+.perf{
+  border-radius: 10px;
+  text-align: center;
+  background-color: #FFCC00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 250px; 
+  margin-left: 50px
+}
+/* Navbar */
+
+/* Sidebar */
+.options{
+  margin-top: 15px;
+}
+/* Sidebar */
