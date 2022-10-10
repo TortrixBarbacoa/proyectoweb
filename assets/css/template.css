@@ -2,7 +2,7 @@
 /* Fuentes */
 h1{
   font-family: "Lato";
-  font-size: 37px;  
+  font-size: 38px;  
 }
 
 h2{
@@ -12,11 +12,17 @@ h2{
 h3{
   font-family: "Poppins";
 }
+
+p{
+  font-family: "Lato";
+}
 /* Fuentes */
 
+/* Lista */
 li{
   list-style-type: none;
 }
+/* Lista */
 
 /* Navbar */
 .perf{
@@ -35,3 +41,18 @@ li{
   margin-top: 15px;
 }
 /* Sidebar */
+
+/* Contenido */
+.card:hover{
+  transition: .2s;
+  transform: scale(1.03);
+}
+
+.divdecor{
+  background-color: #FFCC00; 
+  height: 5px; 
+  margin-bottom: 50px; 
+  margin-left: 400px; 
+  margin-right: 400px;
+}
+/* Contenido */

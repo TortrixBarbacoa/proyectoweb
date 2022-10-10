@@ -1,1 +1,3 @@
 Elian Alvarado (09/10/2022) -> Se creó la carpeta con el proyecto, además de la creación del repositorio en GitHub. Se diseñó la plantilla de la página home, se implementó un navbar y un sidebar con un diseño previamente bosquejado.
+
+Elian Alvarado (10/10/2022) -> Se terminó la plantilla de la página home, agregando la vista tipo "dashboard" y finalizando los últimos detalles.
