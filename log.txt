@@ -5,3 +5,5 @@ Elian Alvarado (10/10/2022) -> Se terminó la plantilla de la página home, agre
 RICARDO AGUILAR (10/10/2022) -> Se completo el modulo de Login de igual forma la pagina de registro por si no tiene usuario el empleado juntamente con sus estilos.
 
 RICARDO AGUILAR (10/10/2022) -> Mejoras del modulo de Login con todas las correciones vistas por el grupo de igual manera se agragaron los comentarios de como funciona cada modulo de codigo.
+
+RICARDO AGUILAR (11/10/2022) -> Cambios conforme las obsevaciones sugeridas por el grupo en el modulo de registro para poder logearse en el modulo del login.
