@@ -3,3 +3,5 @@ Elian Alvarado (09/10/2022) -> Se creó la carpeta con el proyecto, además de l
 Elian Alvarado (10/10/2022) -> Se terminó la plantilla de la página home, agregando la vista tipo "dashboard" y finalizando los últimos detalles.
 
 RICARDO AGUILAR (10/10/2022) -> Se completo el modulo de Login de igual forma la pagina de registro por si no tiene usuario el empleado juntamente con sus estilos.
+
+RICARDO AGUILAR (10/10/2022) -> Mejoras del modulo de Login con todas las correciones vistas por el grupo de igual manera se agragaron los comentarios de como funciona cada modulo de codigo.
