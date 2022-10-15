@@ -48,18 +48,18 @@
 								</div>
 							</div>
 							<div class="col-6 text-right">
-								<a href="forget.html" class="forget-link">Contraseña olvidada</a>
+								<a href="forget.php" class="forget-link">Contraseña olvidada</a>
 							</div>
 						</div>
 						
 						<!-- BOTON DE INICIO DE SESION -->
-						<div class="text-left mb-3">
+						<div class="col-1 text-left mb-3">
 							<button type="submit" class="btn">INGRESAR</button>
 						</div>
 						<div class="row mb-3">
 						</div>
 						<div class="text-white1">¿No tienes una cuenta?
-							<a href="register.html" class="register-link">Registrarse aquí</a>
+							<a href="register.php" class="register-link">Registrarse aquí</a>
 						</div>
 					</form>
 				</div>

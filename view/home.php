@@ -68,21 +68,25 @@ if(!$_SESSION['user_id']){
                 </form>
                 <!-- Searchbar -->
 
+        
                 <!-- Card de Usuario -->
                 <li class="nav-item dropdown perf row">
                     <div class="col-3" style="height: 50px; background-color: white; margin-left: 10px; margin-right: 10px;"></div>
-                    <a class="nav-link dropdown-toggle col-7" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Lato; font-size: 18px; color: black; margin-top: 12px;">
-                        Fulano Perensejo
-                    </a>
+                    
+                    <a class="nav-link dropdown-toggle col-7"  role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Lato; font-size: 18px; color: black; margin-top: 12px;">
+                   
+                     Admin  </a>
 
                     <!-- DROPDOWN DE OPCIONES (CERRAR SESION) -->
 
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Ver Perfil <i class="fa-solid fa-user" style="margin-left: 5px;"></i></a></li>
                         <li><a class="dropdown-item" href="#">Configuración<i class="fa-solid fa-gear" style="margin-left: 5px;"></i></a></li>
-                        <li><span class="dropdown-item" role="button" style="color: red;">Cerrar Sesión <i class="fa-solid fa-right-from-bracket" style="margin-left: 5px; color: red;"></i></span></li>
+                        <li><span class="dropdown-item" role="button" type="submit" style="color: red;"><a  class="formato" href="../controller/Login/logout.php">Cerrar Sesión<i class="fa-solid fa-right-from-bracket" style="margin-left: 5px; color: red;"></i></a> </span></li>
+                       
                     </ul>
                 </li>   
+            
                 <!-- Card de Usuario -->
                 
             </div>
@@ -150,7 +154,9 @@ if(!$_SESSION['user_id']){
                                 <ul class="dropdown-menu" style="background-color: white;">
                                     <li><a class="dropdown-item" href="#" style="color: black; font-family: Poppins;">Categoría 1</a></li>
                                     <li><a class="dropdown-item" href="#" style="color: black; font-family: Poppins;">Categoría 2</a></li>
+                                    
                                     <li><a class="dropdown-item" href="#" style="color: black; font-family: Poppins;">Categoría 3</a></li>
+                                
                                 </ul>
                                 <!-- Contenido Dropdown -->
 

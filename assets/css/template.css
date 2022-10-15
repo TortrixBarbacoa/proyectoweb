@@ -56,3 +56,8 @@ li{
   margin-right: 400px;
 }
 /* Contenido */
+.formato{
+  text-decoration: none;
+  color: red;
+  list-style: none;
+}
