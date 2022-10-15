@@ -1,4 +1,9 @@
-
+<?php 
+session_start();
+if(!$_SESSION['user_id']){
+    header("location: login.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -69,6 +74,9 @@
                     <a class="nav-link dropdown-toggle col-7" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Lato; font-size: 18px; color: black; margin-top: 12px;">
                         Fulano Perensejo
                     </a>
+
+                    <!-- DROPDOWN DE OPCIONES (CERRAR SESION) -->
+
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Ver Perfil <i class="fa-solid fa-user" style="margin-left: 5px;"></i></a></li>
                         <li><a class="dropdown-item" href="#">Configuración<i class="fa-solid fa-gear" style="margin-left: 5px;"></i></a></li>

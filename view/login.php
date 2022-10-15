@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,17 +21,24 @@
 					<div class="logo mt-5 mb-3">
 						<img src="../assets/img/logoprodblack.png" width="550px">
 					</div>
+
+					<form class="form" method="POST" action="../controller/Login/loginController.php">
+
 					<div class="heading mb-3">
 						<h4>Inicie sesión en su cuenta</h4>
 					</div>
-					<form>
+
+						<!-- INPUT DE CORREO ELECTRONICO -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" placeholder="Correo Electronico" required>
+							<input type="email" placeholder="Correo Electronico" required id="inEmail" name="inEmail">
 						</div>
+
+						
+						<!-- INPUT PASSWORD -->
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" placeholder="Contraseña" required>
+							<input type="Password" placeholder="Contraseña" required id="inPassword" name="inPassword">
 						</div>
 						<div class="row mb-3">
 							<div class="col-6 d-flex">
@@ -41,6 +51,8 @@
 								<a href="forget.html" class="forget-link">Contraseña olvidada</a>
 							</div>
 						</div>
+						
+						<!-- BOTON DE INICIO DE SESION -->
 						<div class="text-left mb-3">
 							<button type="submit" class="btn">INGRESAR</button>
 						</div>
