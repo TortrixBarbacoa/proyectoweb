@@ -7,3 +7,7 @@ RICARDO AGUILAR (10/10/2022) -> Se completo el modulo de Login de igual forma la
 RICARDO AGUILAR (10/10/2022) -> Mejoras del modulo de Login con todas las correciones vistas por el grupo de igual manera se agragaron los comentarios de como funciona cada modulo de codigo.
 
 RICARDO AGUILAR (11/10/2022) -> Cambios conforme las obsevaciones sugeridas por el grupo en el modulo de registro para poder logearse en el modulo del login.
+
+FERNANDO PEREZ (13/10/2022) -> Se añadió la base de datos y las funciones php para la autenticación de los usuarios. 
+
+FERNANDO PEREZ (14/10/2022) -> Se arregló la funcionalidad del login para iniciar sesión correctamente.  

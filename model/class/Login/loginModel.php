@@ -13,7 +13,7 @@ class loginModel {
         $sql = "SELECT
                     *
                 FROM
-                    email
+                    proyectoweb
                 WHERE
                     UPPER(email) = UPPER('$email')
                     and password = '$pass'";
