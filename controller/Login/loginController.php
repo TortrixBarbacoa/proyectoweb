@@ -6,7 +6,7 @@ include_once("../../model/functions.php");
 
 $loginModel = new loginModel();
 
-$usuario = $_POST['inEmail'];
+$email = $_POST['inEmail'];
 $clave = $_POST['inPassword'];
 
 $result = array();
@@ -18,13 +18,13 @@ if($row = mysqli_fetch_array($result)){
     $_SESSION['user_nombre'] = $row['nombres'];
     $_SESSION['user_apellido'] = $row['apellidos'];
     $_SESSION['username'] = $row['usuario'];
-    $_SESSION['e_mail'] = $row['email']
+    $_SESSION['e_mail'] = $row['email']; 
 
-    header("location: ../view/home.php");
+    header("location: ../../view/home.php");
 }else{
 
     echo "<script>
-            alert('AUTENTICACIÓN FALLIDA, AL PARECER SU USUARIO O CLAVE SON INVÁLIDOS');
+            alert('AUTENTICACIÓN FALLIDA, AL PARECER SU CORREO O CLAVE SON INVÁLIDOS');
             history.back();
         </script>";
     exit(-1);
