@@ -410,7 +410,7 @@
                     <!-- Card Administrar Usuarios -->
 
                     <!-- Botón Gestionar Proyectos -->
-                    <a href="#" class="btn col-1" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Gestionar Proyectos" style="background-color: #FFCC00; margin-left: 45px; margin-right: 20px;">
+                    <a href="#" class="btn col-1" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Gestionar Proyectos" style="background-color: #FFCC00; margin-left: 45px; margin-right: 12px;">
                         <i style="color: black; font-size: 50px; margin-top: 47px;" class="fa-solid fa-compass-drafting text-center"></i>
                     </a>
                     <!-- Botón Gestionar Proyectos -->
