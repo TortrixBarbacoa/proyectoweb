@@ -448,7 +448,7 @@ if(!$_SESSION['user_id']){
     <!-- Footer -->
     <div class="w-100 p-3 d-flex justify-content-center" style="background-color: black;">
         <span class="text-center" style="margin-top: 50px; margin-bottom: 45px;">
-            <h3 style="color: white; font-size: 20px;">No sé qué poner en el footer jaja</h3>
+            <h3 style="color: white; font-size: 20px;">Información en Construcción</h3>
         </span>
     </div>
     <!-- Footer -->
