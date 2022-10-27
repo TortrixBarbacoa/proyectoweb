@@ -1,4 +1,13 @@
 <?php
+
+include_once("../model/functions.php");
+
+$usrClass = new usuariosModel();
+
+$result = array();
+$resultRoles = array();
+$result = $usrClass->getUsuarios();
+
 ?>
 
 <!DOCTYPE html>
@@ -27,15 +36,15 @@
 					<form>
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" placeholder="Nombre Completo" required>
+							<input type="text" id="nombres" for="nombres" placeholder="Nombre Completo" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" placeholder="Correo Electronico" required>
+							<input type="email" id="usuario" for="usuario" placeholder="Correo Electronico" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" placeholder="Contraseña" required>
+							<input type="password" id="password"  for="password" placeholder="Contraseña" required>
 						</div>
 						<div class="row mb-3">
 							<div class="col-12 d-flex">
@@ -46,11 +55,11 @@
 							</div>
 						</div>
 						<div class="text-left mb-3">
-							<button type="submit" class="btn">Registrar</button>
+							<button  id="btnAgregarUsuario" class="btn btn-success me-md-2 ">Registrar</button>
 						</div>
 
 						<div class="text-white">¿Ya tienes una cuenta?
-							<a href="login.html" class="login-link">Entre aquí</a>
+							<a href="login.php" class="login-link">Entre aquí</a>
 						</div>
 					</form>
 				</div>

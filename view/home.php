@@ -81,7 +81,7 @@ if(!$_SESSION['user_id']){
 
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Ver Perfil <i class="fa-solid fa-user" style="margin-left: 5px;"></i></a></li>
-                        <li><a class="dropdown-item" href="#">Configuración<i class="fa-solid fa-gear" style="margin-left: 5px;"></i></a></li>
+                        <li><a class="dropdown-item" href="Usuarios/usuariosView.php">Modulo Usuarios<i class="fa-solid fa-gear" style="margin-left: 5px;"></i></a></li>
                         <li><span class="dropdown-item" role="button" type="submit" style="color: red;"><a  class="formato" href="../controller/Login/logout.php">Cerrar Sesión<i class="fa-solid fa-right-from-bracket" style="margin-left: 5px; color: red;"></i></a> </span></li>
                        
                     </ul>

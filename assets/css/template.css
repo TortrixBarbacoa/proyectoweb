@@ -61,3 +61,8 @@ li{
   color: red;
   list-style: none;
 }
+.formatoconfig{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
