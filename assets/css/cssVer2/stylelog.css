@@ -1,0 +1,63 @@
+:root{
+    --color-primary: #FFCC00;
+    --color-success: #6fc276;
+    --color-warning: #FFCC00;
+    --color-fail: #ff6961;
+    --color-active: #93CAED;
+    --color-dark: #2f2f2f;
+    --color-background: #eeeeee;
+    --color-info-dark: #18191a;
+    --color-info-light: #fbfaf5;
+}
+
+h1{
+    font-family: 'Rubik';
+    font-size: 40px;
+    color: var(--color-primary);
+}
+
+h2{
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: var(--color-info-light);
+}
+
+h3{
+    font-family: 'Lato';
+    margin-top: 5px;
+    font-size: 25px;
+    color: var(--color-info-dark);
+}
+
+body{
+    background-color: var(--color-background);
+}
+
+.logbox{
+    height: 550px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.logimg{
+    height: 100%;
+    width: 50%;
+    background-image: url(../../img/loginbg.png);
+}
+
+.logimg2{
+    height: 100%;
+    width: 50%;
+    background-color: var(--color-info-dark);
+}
+
+.logbtn{
+    width: 90%;
+    background-color: var(--color-primary);
+}
+
+.logbtn:hover{
+    background-color: var(--color-primary);
+    scale: 1.1;
+    transition: all 300ms ease-in-out ;
+}
