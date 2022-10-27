@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if(!$_SESSION['user_id']){
+    header("location: login.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,7 +45,7 @@
         <!-- Inicio Sidebar -->
         <div class="sidebar" id="sidenav">
             <div class="header-box text-center py-3 ">
-                <img src="./assets/img/logo.png" alt="" width="170.4px" height="48.8px">
+                <img src="../../assets/img/logo.png" alt="" width="170.4px" height="48.8px">
                 <button class="btn d-md-none d-block close-btn "><i class="fa-solid fa-bars-staggered"></i></button>
             </div>
 
@@ -51,8 +60,8 @@
             <hr class="hrcol mx-2">
             <ul class="list-unstyled px-2">
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-gear"></i> Configuración</a></li>
-                <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-user-pen"></i> Editar Perfil</a></li>
-                <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside textlogout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+                <li class="marginside"> <a href="mainEditProf.php" class="text-decoration-none px-3 textside"><i class="fa-solid fa-user-pen"></i> Editar Perfil</a></li>
+                <li class="marginside"> <a href="../../controller/Login/logout.php" class="text-decoration-none px-3 textside textlogout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
             </ul>
 
             <div class="fixed-bottom profile">
@@ -66,7 +75,7 @@
             <!-- Inicio Contenido Dashboard -->
             <div class="container top px-md-4 py-md-4 row">
                 <div class="text-start col-11">
-                    <span class=""><h1>Gestión de Inventario</h1></span>
+
                 </div>
 
                 <div class="col-1 text-end">
@@ -74,9 +83,18 @@
                 </div>
             </div>
 
+
             <!-- Inicio Contenido Refrescable -->
             <div class="container gx-5" style="width: 100%; height: auto;">
-                
+            <div class="text-start col-11">
+                    <span class=""><h1>Bienvenido al Sistema de Inventario <?php echo $_SESSION['user_nombre']." ".$_SESSION['user_apellido'];
+                    ?></b></h4></h1></span>
+                </div>
+            <?php
+                     include 'mainDash.php';
+                    ?>  
+            
+
             </div>
             <!-- Fin Contenido Refrescable -->
         </div>

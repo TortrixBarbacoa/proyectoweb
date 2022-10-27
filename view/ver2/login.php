@@ -41,35 +41,36 @@
 
             <!-- Container Login -->
             <div class="col logimg2 py-5">
-
+            <form class="form" method="POST" action="../../controller/Login/loginController.php">
                 <!-- Label Iniciar Sesión -->
                 <div class="text-center my-5">
                     <h1>Iniciar Sesión</h1>
                 </div>
                 <!-- Label Iniciar Sesión -->
 
-                <!-- Form Usuario -->
+                <!-- Form Email -->
                 <div class="my-3 mx-4">
-                    <label for="exampleFormControlInput1" class="form-label"><h2>Usuario</h2></label>
-                    <input type="user" class="form-control" id="FormUser" placeholder="Ingresar Usuario">
+                    <label for="exampleFormControlInput1" class="form-label" ><h2>Usuario</h2></label>
+                    <input type="user" class="form-control" id="FormUser" placeholder="Ingresar Usuario" name="inEmail">
                 </div>
-                <!-- Form Usuario -->
+                <!-- Form Email -->
 
                 <!-- Form Contraseña -->
                 <div class="mt-4 mb-5 mx-4">
                     <label for="exampleFormControlInput1" class="form-label"><h2>Contraseña</h2></label>
-                    <input type="user" class="form-control" id="FormPass" placeholder="Ingresar Contraseña">
+                    <input type="user" class="form-control" id="FormPass" placeholder="Ingresar Contraseña" name="inPassword">
                 </div>
                 <!-- Form Contraseña -->
 
                 <!-- Botón Ingresar -->
                 <div class="container d-flex justify-content-center">
-                    <div class="btn text-capitalize text-center logbtn">
-                        <h3>Ingresar</h3>
-                    </div>
+                <div class="text-capitalize text-center logbtn">
+							<button type="submit" class="btn">INGRESAR</button>
+						</div>
                 </div>
                 <!-- Botón Ingresar -->
             </div>
+            </form>    <!-- form Login -->
             <!-- Container Login -->
         </div>
         <!-- Container Form Box -->

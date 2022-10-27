@@ -20,7 +20,7 @@ if($row = mysqli_fetch_array($result)){
     $_SESSION['username'] = $row['usuario'];
     $_SESSION['e_mail'] = $row['email']; 
 
-    header("location: ../../view/home.php");
+    header("location: ../../view/ver2/dashboard.php");
 }else{
 
     echo "<script>
