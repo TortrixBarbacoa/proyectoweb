@@ -1,10 +1,11 @@
 <?php 
 session_start();
 if (!$_SESSION['user_id']){
-    header("location: ../../view/home.php");
+    header("location: ../../view/ver2/login.php");
 }
 
-include_once("../../model/functions.php");
+
+include_once("model/functions.php");
 $usrClass = new usuariosModel();
 $result = 0;
 $respuesta = array();
@@ -64,4 +65,5 @@ if($eliminarUsuario == 1){
     $respuesta['resultado'] = $result;
     echo json_encode($respuesta);
 }
+
 ?>

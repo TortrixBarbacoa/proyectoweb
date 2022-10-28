@@ -58,7 +58,7 @@
                 <!-- Form Contraseña -->
                 <div class="mt-4 mb-5 mx-4">
                     <label for="exampleFormControlInput1" class="form-label"><h2>Contraseña</h2></label>
-                    <input type="user" class="form-control" id="FormPass" placeholder="Ingresar Contraseña" name="inPassword">
+                    <input type="Password" class="form-control" id="FormPass" placeholder="Ingresar Contraseña" name="inPassword">
                 </div>
                 <!-- Form Contraseña -->
 

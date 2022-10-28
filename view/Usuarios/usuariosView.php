@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: ../home.php");
+    header("location: ../ver2/home.php");
 }
 
 include_once("../../model/functions.php");

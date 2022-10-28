@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(!$_SESSION['user_id']){
-    header("location: login.php");
+    header("location:login.php");
 }
 
 
@@ -37,6 +37,11 @@ if(!$_SESSION['user_id']){
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/87a0dc1d3c.js" crossorigin="anonymous"></script>
     <!-- Fontawesome -->
+
+    <!-- ContentManager -->
+    <script src="../../assets/js/contenManager.js"></script>  
+    <!-- Fontawesome -->
+
 </head>
 <body>
 
@@ -50,17 +55,17 @@ if(!$_SESSION['user_id']){
             </div>
 
             <ul class="list-unstyled px-2">
-                <li class="marginside active"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-chalkboard"></i> Dashboard</a></li>
-                <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i> Materiales</a></li>
+                <li class="marginside active"> <a href="#" onclick="cargarContenido('home.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-chalkboard"></i>Inicio</a></li>
+                <li class="marginside"> <a href="#" onclick="cargarContenido('mainDash.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i>Materiales</a></li>
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</a></li>
-                <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-users"></i> Personal</a></li>
+                <li class="marginside"> <a href="#"  onclick="cargarContenido('../Usuarios/usuariosView.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-users"></i> Personal</a></li>
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-compass-drafting"></i> Proyectos</a></li>
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-address-book"></i> Clientes</a></li>
             </ul>
             <hr class="hrcol mx-2">
             <ul class="list-unstyled px-2">
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-gear"></i> Configuración</a></li>
-                <li class="marginside"> <a href="mainEditProf.php" class="text-decoration-none px-3 textside"><i class="fa-solid fa-user-pen"></i> Editar Perfil</a></li>
+                <li class="marginside"> <a href="#"  onclick="cargarContenido('mainEditProf.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-user-pen"></i> Editar Perfil</a></li>
                 <li class="marginside"> <a href="../../controller/Login/logout.php" class="text-decoration-none px-3 textside textlogout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
             </ul>
 
@@ -86,16 +91,20 @@ if(!$_SESSION['user_id']){
 
             <!-- Inicio Contenido Refrescable -->
             <div class="container gx-5" style="width: 100%; height: auto;">
-            <div class="text-start col-11">
-                    <span class=""><h1>Bienvenido al Sistema de Inventario <?php echo $_SESSION['user_nombre']." ".$_SESSION['user_apellido'];
-                    ?></b></h4></h1></span>
-                </div>
-            <?php
-                     include 'mainDash.php';
-                    ?>  
-            
+            <div class="wrapper">
+<div class="container">
+    
+
+        <main class="col-md-9 ms-sm-auto col-lg-12 px-md-4">
+            <div class="container" id="contenedorPrincipal">
 
             </div>
+        </main>
+
+    
+</div>
+</div>
+            
             <!-- Fin Contenido Refrescable -->
         </div>
         <!-- Fin Contenido Dashboard -->
@@ -127,5 +136,26 @@ if(!$_SESSION['user_id']){
         })
     </script>
 
+
+
 </body>
 </html>
+
+<script>
+    $(document).ready(function () { 
+
+        //INICIALIZAR EL EFECTO DEL ESTADO DEL SERVIDOR
+        $body = $('body');
+        $(document).on({
+            ajaxStart: function () {
+                $body.addClass('loading');
+            },
+            ajaxStop: function () {
+                $body.removeClass('loading');
+            }
+        });
+        
+        //CARGANDO EL CONTENIDO PRINCIPAL
+        cargarContenido('home.php');
+    });
+</script>

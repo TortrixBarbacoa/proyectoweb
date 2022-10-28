@@ -11,3 +11,7 @@ RICARDO AGUILAR (11/10/2022) -> Cambios conforme las obsevaciones sugeridas por 
 FERNANDO PEREZ (13/10/2022) -> Se añadió la base de datos y las funciones php para la autenticación de los usuarios. 
 
 FERNANDO PEREZ (14/10/2022) -> Se arregló la funcionalidad del login para iniciar sesión correctamente.  
+
+Emilio Morales (27/10/2022) -> Se restructuro la página para implementar el Ajax.  
+
+Emilio Morales (28/10/2022) -> Se añadieron las mismas funcionalidades ya vistas como el login y los metodos.
