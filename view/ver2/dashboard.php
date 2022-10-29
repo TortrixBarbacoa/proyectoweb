@@ -55,7 +55,7 @@ if(!$_SESSION['user_id']){
             </div>
 
             <ul class="list-unstyled px-2">
-                <li class="marginside active"> <a href="#" onclick="cargarContenido('home.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-chalkboard"></i>Inicio</a></li>
+                <li class="marginside active"> <a href="#" onclick="cargarContenido('mainHome.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-chalkboard"></i>Inicio</a></li>
                 <li class="marginside"> <a href="#" onclick="cargarContenido('mainDash.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i>Materiales</a></li>
                 <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</a></li>
                 <li class="marginside"> <a href="#"  onclick="cargarContenido('../Usuarios/usuariosView.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-users"></i> Personal</a></li>
@@ -156,6 +156,6 @@ if(!$_SESSION['user_id']){
         });
         
         //CARGANDO EL CONTENIDO PRINCIPAL
-        cargarContenido('home.php');
+        cargarContenido('mainHome.php');
     });
 </script>
