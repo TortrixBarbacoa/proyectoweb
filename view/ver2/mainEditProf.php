@@ -21,7 +21,7 @@ $result = $usrClass->getUsuarios();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
-    <script src="assets/js/moduloUsuarios.js"></script>
+    <script src="../../assets/js/moduloUsuarios.js"></script>
     
 </head>
 <body>
@@ -65,12 +65,13 @@ $result = $usrClass->getUsuarios();
 <!-- Bot Input Box -->
 <!-- Segundo Grupo de Inputs -->
 <div class="container profbox justify-content-center my-4 mx-2 py-1">
+<form method="POST">
         <!-- Input Nombres -->
         <div class="container profbox my-2">
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1">Nombres</span>
-            <input type="password" class="form-control" placeholder="Digite solo sus nombres" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña">Actualizar Nombre</button>
+            <input class="form-control" placeholder="Digite solo sus nombres" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn ms-1 updbtn actualizarName" id="actualizarName" name="actualizarName" onclick="actualizarName()">Actualizar Nombre</button>
         </div>
     </div>
     <!-- Input Nombre -->
@@ -79,8 +80,8 @@ $result = $usrClass->getUsuarios();
         <div class="container profbox my-2">
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1">Apellidos</span>
-            <input type="password" class="form-control" placeholder="Digite sus apellidos" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña">Actualizar Apellidos</button>
+            <input class="form-control" placeholder="Digite sus apellidos" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn ms-1 updbtn updContraseña" id="actApellido">Actualizar Apellidos</button>
         </div>
     </div>
     <!-- Input Apellidos -->
@@ -90,7 +91,7 @@ $result = $usrClass->getUsuarios();
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1">Correo Electrónico</span>
             <input type="text" class="form-control" placeholder="Digite el nuevo correo" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updCorreo">Actualizar Correo</button>
+            <button class="btn ms-1 updbtn updCorreo" id="actEmail">Actualizar Correo</button>
         </div>
     </div>
     <!-- Input Correo -->
@@ -102,7 +103,7 @@ $result = $usrClass->getUsuarios();
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1">Número de Teléfono</span>
             <input type="number" class="form-control" placeholder="Digite " aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña">Actualizar Teléfono</button>
+            <button class="btn ms-1 updbtn updContraseña" id="actTelefono">Actualizar Teléfono</button>
         </div>
     </div>
     <!-- Input Teléfono -->
@@ -112,9 +113,10 @@ $result = $usrClass->getUsuarios();
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1">Contraseña</span>
             <input type="password" class="form-control" placeholder="Contraseña Nueva" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña">Actualizar Contraseña</button>
+            <button class="btn ms-1 updbtn updContraseña" id="actPassword">Actualizar Contraseña</button>
         </div>
     </div>
+</form>
     <!-- Input Contraseña -->
 </div>
 <!-- Segundo Grupo de Inputs -->
