@@ -14,7 +14,8 @@ class usuariosModel {
                         password,                        
                         nombres,
                         apellidos,                                                
-                        email 
+                        email,
+                        telefono
                 FROM users ";
  
         $resultado = mysqli_query($conexion, $sql);
@@ -35,7 +36,8 @@ class usuariosModel {
                         password,                        
                         nombres,
                         apellidos,                                                
-                        email 
+                        email,
+                        telefono 
                 FROM users where id = $user_id";
  
         $resultado = mysqli_query($conexion, $sql);
@@ -45,7 +47,7 @@ class usuariosModel {
     /**
      * funcion para crear nuevo usuario
      */
-    function crearUsuario($nombres, $apellidos, $usuario, $password, $user_id){
+    function crearUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "INSERT INTO users
@@ -54,16 +56,17 @@ class usuariosModel {
                     apellidos,                   
                     usuario,
                     password,                    
-                    estado,
-                    user_created_id,
-                    fecha_created)
+                    email,
+                    telefono
+                    )
                     VALUES
                     (
                     '$nombres',
                     '$apellidos',                     
                     '$usuario',
                     '$password',                                                        
-                    'A',
+                    '$email',
+                    '$telefono',
                     $user_id,
                     now())";        
 
@@ -81,7 +84,17 @@ class usuariosModel {
      * Función para actualizar un usuario
      */
 
-    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $user_update_id, $user_id){
+    function actualizarName($nombres, $user_update_id, $user_id){
+        $nombres = $_POST["actualizarName"];
+        $conexionClass = new Tools();
+        $conexion = $conexionClass->conectar();
+        $sql = "UPDATE
+                    SET nombres = '$nombres',
+                    user_updated_id = $user_update_id,
+                    WHERE id = $user_id";
+    }
+
+    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_update_id, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "UPDATE users 

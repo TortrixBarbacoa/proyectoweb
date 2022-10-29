@@ -162,7 +162,8 @@
         <!-- Conjunto de Task Buttons -->
         <div class="col-3 container mx-3 gx-5 my-4 px-2 text-center">
             <div class="taskbox my-3 p-2">
-                <span class="texttask btn">Nuevo Usuario <i class="fa-solid fa-user-plus"></i></span>
+            <form class="form" method="POST" action="../../controller/Login/loginController.php">
+                <span a href="#" class="texttask btn">Nuevo Usuario <i class="fa-solid fa-user-plus"></i></span>
             </div>
             <div class="taskbox my-3 p-2">
                 <span class="texttask btn">Nueva Herramienta <i class="fa-solid fa-screwdriver"></i></span>
@@ -171,6 +172,7 @@
                 <span class="texttask btn">Nuevo Proyecto <i class="fa-solid fa-location-arrow"></i></span>
             </div>
         </div>
+            </form>
         <!-- Conjunto de Task Buttons -->
     </div>
     <!-- Fin Segundo Row -->
