@@ -13,7 +13,7 @@ $resultRoles = array();
 $result = $usrClass->getUsuarios();
 
 ?>
-<script src="assets/js/moduloUsuarios.js"></script>
+<script src="../../assets/js/moduloUsuarios.js"></script>
 <div class="card">
     <form method="POST">
     <div class="card-header">
@@ -37,7 +37,6 @@ $result = $usrClass->getUsuarios();
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">NOMBRE</th>
-                            <th scope="col">USERNAME</th>
                             <th scope="col">CLAVE</th>
                             <th scope="col">EMAIL</th>
                             <th scope="col">TELEFONO</th>
@@ -53,7 +52,6 @@ $result = $usrClass->getUsuarios();
                         <tr>
                             <th><?php echo $fila['id']; ?></th>
                             <td><?php echo $fila['nombres']." ".$fila['apellidos']; ?></td>
-                            <td><?php echo $fila['usuario']; ?></td>
                             <td><?php echo $fila['password']; ?></td>
                             <td><?php echo $fila['email']; ?></td>
                             <td><?php echo $fila['telefono']; ?></td>
@@ -101,12 +99,6 @@ $result = $usrClass->getUsuarios();
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="apellidos" placeholder="aqui va tu apellido">
                         <label for="apellidos">Apellidos</label>
-                    </div>
-
-
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="usuario" placeholder="username">
-                        <label for="usuario">Username</label>
                     </div>
 
                     <div class="form-floating mb-3">
