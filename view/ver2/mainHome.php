@@ -13,10 +13,10 @@
                 title="Hora en Guatemala" target="_blank" rel="nofollow">
                 Hora actual en Guatemala</a>
         </p>
-        <div id="clock_block_cb635c6569bb9bd"></div>
+
 
         </div>
-        <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        
     </div>
 
     <div class="container col dashbox text-center py-2 mx-2">

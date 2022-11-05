@@ -16,7 +16,7 @@ class usuariosModel {
                         apellidos,                                                
                         email,
                         telefono
-                FROM users ";
+                FROM proyectoweb ";
  
         $resultado = mysqli_query($conexion, $sql);
         $conexionClass->desconectar($conexion);
@@ -38,7 +38,7 @@ class usuariosModel {
                         apellidos,                                                
                         email,
                         telefono 
-                FROM users where id = $user_id";
+                FROM proyectoweb where id = $user_id";
  
         $resultado = mysqli_query($conexion, $sql);
         $conexionClass->desconectar($conexion);
@@ -50,7 +50,7 @@ class usuariosModel {
     function crearUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
-        $sql = "INSERT INTO users
+        $sql = "INSERT INTO proyectoweb
                     (
                     nombres,
                     apellidos,                   
@@ -97,7 +97,7 @@ class usuariosModel {
     function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_update_id, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
-        $sql = "UPDATE users 
+        $sql = "UPDATE proyectoweb 
                     SET nombres = '$nombres',
                         apellidos = '$apellidos',
                         usuario = '$usuario',
@@ -122,7 +122,7 @@ class usuariosModel {
     function eliminarUsuario($user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
-        $sql = "DELETE FROM users WHERE id = $user_id";
+        $sql = "DELETE FROM proyectoweb WHERE id = $user_id";
         
         $resultado = mysqli_query($conexion, $sql);
         if($resultado){

@@ -6,7 +6,7 @@ class loginModel {
      * METODO DE AUTENTICACION
      */
 
-     function autenticar($email, $pass){
+     function autenticar($usuario, $pass){
         $connClass = new Tools();
         $conexion = $connClass->conectar();
 
@@ -15,7 +15,7 @@ class loginModel {
                 FROM
                     proyectoweb
                 WHERE
-                    UPPER(email) = UPPER('$email')
+                    UPPER(user) = UPPER('$usuario')
                     and password = '$pass'";
 
         $resultado = mysqli_query($conexion, $sql);

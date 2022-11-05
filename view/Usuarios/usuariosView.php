@@ -13,7 +13,7 @@ $resultRoles = array();
 $result = $usrClass->getUsuarios();
 
 ?>
-<script src="assets/js/moduloUsuarios.js"></script>
+<script src="../../assets/js/moduloUsuarios.js"></script>
 <div class="card">
     <div class="card-header">
         <div
