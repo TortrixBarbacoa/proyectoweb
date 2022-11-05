@@ -4,8 +4,8 @@
 #A BASE DE DATOS
 
 define("SERVER", "127.0.0.1");
-define("USERDB", "root");
-define("PASSDB", "Admin123*");
+define("USERDB", "usuariodb");
+define("PASSDB", "Usuariodb*123");
 define("DATABASE", "Sistema");
 
 #OTROS PARAMETROS DE CONFIGURACIÓN

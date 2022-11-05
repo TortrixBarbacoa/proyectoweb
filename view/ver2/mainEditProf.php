@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: dashboard.php");
+    header("location: mainEditProf.php");
 }
 
 include_once("../../model/functions.php");
@@ -13,7 +13,7 @@ $resultRoles = array();
 $result = $usrClass->getUsuarios();
 
 ?>
-
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,8 +52,8 @@ $result = $usrClass->getUsuarios();
 
         <!-- Input Username -->
         <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon2">Nombre de Usuario</span>
-            <input type="text" class="form-control" value="<?php echo $_SESSION['username'] ?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon2">Correo Electronico</span>
+            <input type="text" class="form-control" value="<?php echo $_SESSION['e_mail'] ?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
        
         </div>
         <!-- Input Username -->
@@ -65,13 +65,13 @@ $result = $usrClass->getUsuarios();
 <!-- Bot Input Box -->
 <!-- Segundo Grupo de Inputs -->
 <div class="container profbox justify-content-center my-4 mx-2 py-1">
-<form method="POST">
+<form class="form" method="POST" action="../../controller/ActualizarUsuario/actualizarUcontroller.php">
         <!-- Input Nombres -->
         <div class="container profbox my-2">
         <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon1">Nombres</span>
-            <input class="form-control" placeholder="Digite solo sus nombres" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn actualizarName" id="actualizarName" name="actualizarName" onclick="actualizarName()">Actualizar Nombre</button>
+            <span class="input-group-text" for="innombre" id="basic-addon1">Nombres</span>
+            <input class="form-control" id="innombre"  placeholder="Digite solo sus nombres" aria-label="Nombres" aria-describedby="basic-addon1">
+           
         </div>
     </div>
     <!-- Input Nombre -->
@@ -79,43 +79,26 @@ $result = $usrClass->getUsuarios();
         <!-- Input Apellidos -->
         <div class="container profbox my-2">
         <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon1">Apellidos</span>
-            <input class="form-control" placeholder="Digite sus apellidos" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña" id="actApellido">Actualizar Apellidos</button>
+            <span class="input-group-text"  for="inapellido" id="basic-addon1">Apellidos</span>
+            <input class="form-control" id="inapellido" placeholder="Digite sus apellidos" aria-label="Apellidos" aria-describedby="basic-addon1">
+           
+          
         </div>
     </div>
     <!-- Input Apellidos -->
-
-    <!-- Input Correo -->
-    <div class="container profbox my-2">
-        <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon1">Correo Electrónico</span>
-            <input type="text" class="form-control" placeholder="Digite el nuevo correo" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updCorreo" id="actEmail">Actualizar Correo</button>
-        </div>
-    </div>
-    <!-- Input Correo -->
-
-
-    <!-- Probablemente inecesario queda pendiente -->
-    <!-- Input Teléfono -->
-    <div class="container profbox my-2">
-        <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon1">Número de Teléfono</span>
-            <input type="number" class="form-control" placeholder="Digite " aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña" id="actTelefono">Actualizar Teléfono</button>
-        </div>
-    </div>
-    <!-- Input Teléfono -->
-
+   
     <!-- Input Contraseña -->
     <div class="container profbox my-2">
         <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon1">Contraseña</span>
-            <input type="password" class="form-control" placeholder="Contraseña Nueva" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn ms-1 updbtn updContraseña" id="actPassword">Actualizar Contraseña</button>
+            <span class="input-group-text" id="basic-addon1" for="inpassword">Contraseña</span>
+            <input type="password" class="form-control"   id="inpassword" placeholder="Contraseña Nueva" aria-label="password" aria-describedby="basic-addon1">
+           
         </div>
+        <button type="button" class="btn btn-primary" id="aactUsuario">Actualizar Usuario</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
     </div>
+    
+       
 </form>
     <!-- Input Contraseña -->
 </div>

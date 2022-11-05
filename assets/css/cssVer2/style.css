@@ -1,3 +1,9 @@
+.divider::after, .divider::before{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
 :root{
     --color-primary: #FFCC00;
     --color-success: #6fc276;
