@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: ../ver2/home.php");
+    header("location: ../ver2/dashboard.php");
 }
 
 include_once("../../model/functions.php");
@@ -15,6 +15,7 @@ $result = $usrClass->getUsuarios();
 ?>
 <script src="assets/js/moduloUsuarios.js"></script>
 <div class="card">
+    <form method="POST">
     <div class="card-header">
         <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -38,7 +39,8 @@ $result = $usrClass->getUsuarios();
                             <th scope="col">NOMBRE</th>
                             <th scope="col">USERNAME</th>
                             <th scope="col">CLAVE</th>
-                            <th scope="col">ESTADO</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">TELEFONO</th>
                             <th scope="col">EDITAR</th>
                             <th scope="col">ELIMINAR</th>
                         </tr>
@@ -53,7 +55,8 @@ $result = $usrClass->getUsuarios();
                             <td><?php echo $fila['nombres']." ".$fila['apellidos']; ?></td>
                             <td><?php echo $fila['usuario']; ?></td>
                             <td><?php echo $fila['password']; ?></td>
-                            <td><?php echo $fila['estado']; ?></td>
+                            <td><?php echo $fila['email']; ?></td>
+                            <td><?php echo $fila['telefono']; ?></td>
                             <td>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <button class="btn btn-warning me-md-2" id="btnEditarUsuario"
@@ -77,6 +80,7 @@ $result = $usrClass->getUsuarios();
                 </table>
             </div>
         </div>
+                </form>
     </div>
     <!-- AQUI INICIA ESTA EL FORMULARIO MODAL PARA AGREGAR USUARIOS -->
     <div class="modal fade" id="formNuevoUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
