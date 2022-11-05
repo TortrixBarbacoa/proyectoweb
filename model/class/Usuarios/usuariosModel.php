@@ -88,7 +88,7 @@ class usuariosModel {
         $nombres = $_POST["actualizarName"];
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
-        $sql = "UPDATE
+        $sql = "UPDATE proyectoweb
                     SET nombres = '$nombres',
                     user_updated_id = $user_update_id,
                     WHERE id = $user_id";

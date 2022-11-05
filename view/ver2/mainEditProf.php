@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: mainEditProf.php");
+    header("location: login.php");
 }
 
 include_once("../../model/functions.php");

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: ../ver2/dashboard.php");
+    header("location: login.php");
 }
 
 include_once("../../model/functions.php");
@@ -53,7 +53,7 @@ $result = $usrClass->getUsuarios();
                         <tr>
                             <th><?php echo $fila['id']; ?></th>
                             <td><?php echo $fila['nombres']." ".$fila['apellidos']; ?></td>
-                            <td><?php echo $fila['usuario']; ?></td>
+                           
                             <td><?php echo $fila['password']; ?></td>
                             <td><?php echo $fila['email']; ?></td>
                             <td><?php echo $fila['telefono']; ?></td>

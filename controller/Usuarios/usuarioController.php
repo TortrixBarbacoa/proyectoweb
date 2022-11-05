@@ -1,8 +1,9 @@
 <?php 
 session_start();
 if (!$_SESSION['user_id']){
-    header("location: controller/Usuarios/usuarioController.php");
+    header("location: ../../view/ver2/login.php");
 }
+
 
 include_once("model/functions.php");
 $usrClass = new usuariosModel();
@@ -28,7 +29,7 @@ if($obtenerUsuario == 1){
         $respuesta['usuario'] = $fila['usuario'];
         $respuesta['password'] = $fila['password'];
         $respuesta['email'] = $fila['email'];
-    
+        $respuesta['telefono'] = $fila['telefono'];
 
     }
 
@@ -41,7 +42,7 @@ if($crearUsuario == 1){
     $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : "0";
     $password = (isset($_POST['password'])) ? $_POST['password'] : "0";
     $email = (isset($_POST['email'])) ? $_POST['email'] : "0";
-  
+    $telefono = (isset($_POST['telefono'])) ? $_POST['telefono'] : "0";
         
     $result = $usrClass->crearUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $_SESSION['user_id']);
 
@@ -66,7 +67,7 @@ if($actualizarUsuario == 1){
     $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : "0";
     $password = (isset($_POST['password'])) ? $_POST['password'] : "0";
     $email = (isset($_POST['email'])) ? $_POST['email'] : "0";
-  
+    $telefono = (isset($_POST['telefono'])) ? $_POST['telefono'] : "0";
         
     $result = $usrClass->actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $_SESSION['user_id']);
 
