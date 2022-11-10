@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION['user_id']) {
-    header("location: login.php");
+    header("location: ../ver2/login.php");
 }
 
 include_once("../../model/functions.php");
@@ -36,11 +36,10 @@ $result = $usrClass->getUsuarios();
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
+                            <th scope="col">USUARIO</th>
                             <th scope="col">NOMBRE</th>
-                            <th scope="col">USERNAME</th>
                             <th scope="col">CLAVE</th>
-                            <th scope="col">EMAIL</th>
-                            <th scope="col">TELEFONO</th>
+                            <th scope="col">EMAIL</th> 
                             <th scope="col">EDITAR</th>
                             <th scope="col">ELIMINAR</th>
                         </tr>
@@ -52,11 +51,11 @@ $result = $usrClass->getUsuarios();
                     ?>
                         <tr>
                             <th><?php echo $fila['id']; ?></th>
+                            <td><?php echo $fila['user']; ?></td>
                             <td><?php echo $fila['nombres']." ".$fila['apellidos']; ?></td>
-                           
                             <td><?php echo $fila['password']; ?></td>
                             <td><?php echo $fila['email']; ?></td>
-                            <td><?php echo $fila['telefono']; ?></td>
+                          
                             <td>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <button class="btn btn-warning me-md-2" id="btnEditarUsuario"
@@ -94,19 +93,25 @@ $result = $usrClass->getUsuarios();
                 </div>
 
                 <div class="modal-body">
+
+                <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="usuario" placeholder="aqui va tu Usuario">
+                        <label for="usuario">Usuario</label>
+                    </div>
+
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nombres" placeholder="aqui va tu nombre">
                         <label for="nombres">Nombres</label>
                     </div>
+                   
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="apellidos" placeholder="aqui va tu apellido">
                         <label for="apellidos">Apellidos</label>
                     </div>
 
-
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="usuario" placeholder="username">
-                        <label for="usuario">Username</label>
+                        <input type="email" class="form-control" id="email" placeholder="aqui va tu clave">
+                        <label for="email">Correo Electronico</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -116,7 +121,7 @@ $result = $usrClass->getUsuarios();
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="btnAgregarUsuario">Agregar Usuario</button>
+                    <button type="button" class="btn btn-primary" id="newUsuario">Agregar Usuario</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
 

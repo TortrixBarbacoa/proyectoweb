@@ -10,12 +10,14 @@ class usuariosModel {
         $conexion = $conexionClass->conectar();
 
         $sql = "SELECT id,
-                        user,
-                        password,                        
-                        nombres,
-                        apellidos,                                                
-                        email,
-                        telefono
+        user,                        
+        nombres,
+        apellidos,
+        password,
+        email                                         
+        
+                                                            
+   
                 FROM proyectoweb ";
  
         $resultado = mysqli_query($conexion, $sql);
@@ -32,12 +34,11 @@ class usuariosModel {
         $conexion = $conexionClass->conectar();
 
         $sql = "SELECT id,
-                        user,
-                        password,                        
-                        nombres,
-                        apellidos,                                                
-                        email,
-                        telefono 
+        user,                        
+        nombres,
+        apellidos,
+        email                                                               
+   
                 FROM proyectoweb where id = $user_id";
  
         $resultado = mysqli_query($conexion, $sql);
@@ -47,27 +48,29 @@ class usuariosModel {
     /**
      * funcion para crear nuevo usuario
      */
-    function crearUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_id){
+    function crearUsuario($usuario, $nombres, $apellidos, $email, $password, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "INSERT INTO proyectoweb
                     (
-                    nombres,
-                    apellidos,                   
-                    usuario,
-                    password,                    
-                    email,
-                    telefono
+        user,                        
+        nombres,
+        apellidos,
+        email,
+        password,
+        user_created_id,
+        fecha_created
+                                                          
+   
                     )
                     VALUES
                     (
+                    '$usuario',
                     '$nombres',
                     '$apellidos',                     
-                    '$usuario',
-                    '$password',                                                        
                     '$email',
-                    '$telefono',
-                    $user_id,
+                    '$password', 
+                    '$user_id',                                                          
                     now())";        
 
         $resultado = mysqli_query($conexion, $sql);
@@ -88,21 +91,21 @@ class usuariosModel {
         $nombres = $_POST["actualizarName"];
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
-        $sql = "UPDATE proyectoweb
+        $sql = "UPDATE
                     SET nombres = '$nombres',
-                    user_updated_id = $user_update_id,
+                    updated_user_id = $user_update_id,
                     WHERE id = $user_id";
     }
 
-    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $telefono, $user_update_id, $user_id){
+    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $user_update_id, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "UPDATE proyectoweb 
                     SET nombres = '$nombres',
                         apellidos = '$apellidos',
-                        usuario = '$usuario',
+                        user = '$usuario',
                         password = '$password',                                            
-                        user_updated_id = $user_update_id,
+                        updated_user_id = $user_update_id,
                         fecha_updated = now()
                 WHERE id = $user_id";        
         

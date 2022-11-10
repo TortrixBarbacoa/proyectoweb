@@ -7,7 +7,7 @@ if (!$_SESSION['user_id']) {
 include_once("../../model/functions.php");
 
 $usrClass = new usuariosModel();
-
+$loginModel = new loginModel();
 $result = array();
 $resultRoles = array();
 $result = $usrClass->getUsuarios();
@@ -52,11 +52,19 @@ $result = $usrClass->getUsuarios();
 
         <!-- Input Username -->
         <div class="input-group my-3">
-            <span class="input-group-text" id="basic-addon2">Correo Electronico</span>
-            <input type="text" class="form-control" value="<?php echo $_SESSION['e_mail'] ?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon2">Usuario</span>
+            <input type="text" class="form-control" value="<?php echo $_SESSION['username'];?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
        
         </div>
         <!-- Input Username -->
+         <!-- Input Correo -->
+         <div class="input-group my-3">
+            <span class="input-group-text" id="basic-addon2">Email</span>
+            <input type="text" class="form-control" value="<?php echo $_SESSION['e_mail'];?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
+       
+        </div>
+        <!-- Input Correo -->
+        
     </div>
     <!-- Primer Grupo de Inputs -->
 </div>

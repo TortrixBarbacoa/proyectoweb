@@ -17,3 +17,5 @@ Emilio Morales (27/10/2022) -> Se restructuro la página para implementar el Aja
 Emilio Morales (28/10/2022) -> Se añadieron las mismas funcionalidades ya vistas como el login y los metodos.
 
 Fernando Perez (04/11/2022) -> Se añadio la tabla de personal, pendiente correccion de pequeños errores. 
+
+Emilio Morales (04/11/2022) -> Revision de tabla usuarios y modificación de base de datos.
