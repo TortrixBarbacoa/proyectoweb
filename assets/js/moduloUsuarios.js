@@ -5,40 +5,35 @@ $('#newUsuario').on('click', function () {
     var usuario = $('#usuario').val();
     var password = $('#password').val();
     var email = $('#email').val();
-
+    
+    if (nombres == ""){
+        alert('El nombre es obligatorio');
+        return false;
+    }
+    if (apellidos == "") {
+        alert('El apellido es obligatorio');
+        return false;
+    }
 
     if (usuario == "") {
         alert('El usuario es obligatorio');
         return false;
     }
 
-    if (nombres == ""){
-        alert('El nombre es obligatorio');
-        return false;
-    }
-
-    if (apellidos == "") {
-        alert('El apellido es obligatorio');
-        return false;
-    }
-
-    if (email == "") {
-        alert('El correo electronico es obligatorio');
-        return false;
-    }
-
-
     if (password == "") {
         alert('El password es obligatorio');
         return false;
     }
 
-  
+    if (email == "") {
+        alert('El correo es obligatorio');
+        return false;
+    }
 
     $.ajax({
         type: 'POST',
-        data: "crear_usuario=1&nombres=" + nombres + "&user=" + usuario + "&apellidos=" + apellidos +  "&email=" + email + "&password=" + password ,
-        url: '../../controller/Usuarios/usuarioController.php',
+        data: "crear_usuario=1&nombres=" + nombres + "&apellidos=" + apellidos + "&usuario=" + usuario + "&password=" + password + "&email=" + email,
+        url: '../../controller/Usuarios/usuariosController.php',
         dataType: 'json',
         success: function(data){
             var resultado = data.resultado;
@@ -48,7 +43,7 @@ $('#newUsuario').on('click', function () {
                 $('.modal-backdrop').remove();
 
                 alert('Usuario creado exitosamente');
-                cargarContenido('../..view/ver2/dashboard.php');
+                cargarContenido('../view/Usuarios/usuariosView.php');
             }else{
                 alert('No se pudo crear el usuario');
             }
@@ -56,7 +51,6 @@ $('#newUsuario').on('click', function () {
     });
 
 });
-
 $('#actualizarName').on('click', function () {
     
     var nombres = $('#nombres_upd').val();
@@ -69,7 +63,7 @@ $('#actualizarName').on('click', function () {
     $.ajax({
         type: 'POST',
         data: "actualizar_nombres=1&id=" + id + "&nombres=" + nombres,
-        url: '../../controller/Usuarios/usuarioController.php',
+        url: '../../controller/Usuarios/usuariosController.php',
         dataType: 'json',
         success: function(data){
             var resultado = data.resultado;
@@ -124,7 +118,7 @@ $('#actUsuario').on('click', function () {
     $.ajax({
         type: 'POST',
         data: "actualizar_usuario=1&id=" + id + "&nombres=" + nombres + "&apellidos=" + apellidos + "&usuario=" + usuario + "&password=" + password + "&email" + email,
-        url: '../../controller/Usuarios/usuarioController.php',
+        url: '../../controller/Usuarios/usuariosController.php',
         dataType: 'json',
         success: function(data){
             var resultado = data.resultado;
@@ -145,7 +139,7 @@ function obtenerUsuario(id){
     $.ajax({
         type: 'POST',
         data: "obtener_usuario=1&user_id=" + id,
-        url: '../../controller/Usuarios/usuarioController.php',
+        url: '../../controller/Usuarios/usuariosController.php',
         dataType: 'json',
         success: function (data) {
             var id = data.id;
@@ -170,7 +164,7 @@ function eliminarUsuario(id){
     $.ajax({
         type: 'POST',
         data: "eliminar_usuario=1&user_id=" + id,
-        url: 'controller/Usuarios/usuarioController.php',
+        url: '../../controller/Usuarios/usuariosController.php',
         dataType: 'json',
         success: function (data) {
             var resultado = data.resultado;

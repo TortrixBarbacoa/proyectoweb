@@ -52,26 +52,25 @@ class usuariosModel {
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "INSERT INTO proyectoweb
-                    (
+        (
         user,                        
         nombres,
         apellidos,
         email,
         password,
-        user_created_id,
-        fecha_created
-                                                          
-   
-                    )
-                    VALUES
-                    (
-                    '$usuario',
-                    '$nombres',
-                    '$apellidos',                     
-                    '$email',
-                    '$password', 
-                    '$user_id',                                                          
-                    now())";        
+        estado,
+        user_create_id,
+        fecha_created)
+        VALUES
+        (
+        '$usuario',
+        '$nombres',
+        '$apellidos',                     
+        '$email',
+        '$password', 
+        'A', 
+        '$user_id',                                                          
+        now())";        
 
         $resultado = mysqli_query($conexion, $sql);
         if($resultado){
@@ -87,17 +86,17 @@ class usuariosModel {
      * Función para actualizar un usuario
      */
 
-    function actualizarName($nombres, $user_update_id, $user_id){
+    function actualizarName($nombres, $update_user_id, $user_id){
         $nombres = $_POST["actualizarName"];
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "UPDATE
                     SET nombres = '$nombres',
-                    updated_user_id = $user_update_id,
+                    update_user_id = $update_user_id,
                     WHERE id = $user_id";
     }
 
-    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $user_update_id, $user_id){
+    function actualizarUsuario($nombres, $apellidos, $usuario, $password, $email, $update_user_id, $user_id){
         $conexionClass = new Tools();
         $conexion = $conexionClass->conectar();
         $sql = "UPDATE proyectoweb 
@@ -105,7 +104,7 @@ class usuariosModel {
                         apellidos = '$apellidos',
                         user = '$usuario',
                         password = '$password',                                            
-                        updated_user_id = $user_update_id,
+                        update_user_id = $update_user_id,
                         fecha_updated = now()
                 WHERE id = $user_id";        
         

@@ -1,12 +1,15 @@
 <?php 
+echo "PASO 1"; 
 session_start();
 if (!$_SESSION['user_id']){
     header("location: ../../view/ver2/login.php");
 }
 
+echo "PASO 2";
 
 include_once("../../model/functions.php");
 
+echo "PASO 3";
 $usrClass = new usuariosModel();
 $result = 0;
 $respuesta = array();
@@ -25,17 +28,17 @@ if($obtenerUsuario == 1){
 
     if ($fila = mysqli_fetch_array($result)){
         $respuesta['id'] = $fila['id'];
+        $respuesta['user'] = $fila['user'];
         $respuesta['nombres'] = $fila['nombres'];
         $respuesta['apellidos'] = $fila['apellidos'];
-        $respuesta['user'] = $fila['user'];
-        $respuesta['password'] = $fila['password'];
         $respuesta['email'] = $fila['email'];
-        $respuesta['telefono'] = $fila['telefono'];
-
+        $respuesta['password'] = $fila['password'];
+      
     }
 
     echo json_encode($respuesta);
 }
+
 
 if($crearUsuario == 1){
 

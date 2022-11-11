@@ -29,7 +29,7 @@ $result = $usrClass->getUsuarios();
         <div class="container">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-success me-md-2" id="btnNuevoUsuario" name="btnNuevoUsuario" type="button"
-                    data-bs-toggle="modal" data-bs-target="#formNuevoUsuario">Nuevo Usuario</button>
+                    data-bs-toggle="modal" data-bs-target="#formNuevoUsuario">Nuevo Usuario</button>    
             </div>
             <div class="table-responsive">
                 <table class="table">
@@ -58,7 +58,7 @@ $result = $usrClass->getUsuarios();
                           
                             <td>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-warning me-md-2" id="btnEditarUsuario"
+                                    <button class="btn btn-warning me-md-2" id="btnEditarUsuario"data-bs-target="#formActualizaUsuario"
                                         name="btnEditarUsuario" type="button" onclick="obtenerUsuario(<?php echo $fila['id']; ?>);">Editar</button>
                                 </div>
                             </td>
@@ -121,7 +121,7 @@ $result = $usrClass->getUsuarios();
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="newUsuario">Agregar Usuario</button>
+                    <button type="button" class="btn btn-primary" name="newUsuario" id="newUsuario">Agregar Usuario</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
 
@@ -129,7 +129,7 @@ $result = $usrClass->getUsuarios();
         </div>
     </div>
 
-    <!-- AQUI INICIA ESTA EL FORMULARIO MODAL PARA AGREGAR USUARIOS -->
+    <!-- AQUI INICIA ESTA EL FORMULARIO MODAL PARA Actualizar USUARIOS -->
     <div class="modal fade" id="formActualizaUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">

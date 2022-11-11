@@ -10,7 +10,7 @@ define("DATABASE", "Sistema");
 
 #OTROS PARAMETROS DE CONFIGURACIÓN
 define("RAIZ_APLICACION", dirname(__FILE__));
-define("DEBUG", "true");
+define("DEBUG", "false");
 
 
 ?>
