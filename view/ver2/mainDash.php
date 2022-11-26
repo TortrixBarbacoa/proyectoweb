@@ -1,12 +1,28 @@
-    <!-- Principio Primer Row -->
+<?php
+session_start();
+if (!$_SESSION['user_id']) {
+    header("location: ../ver2/login.php");
+}
+
+include_once("../../model/functions.php");
+
+$usrClass = new usuariosModel();
+$result = array();
+$resultRoles = array();
+$result = $usrClass->getUsuarios();
+$resultRoles = $usrClass->getroll();
+
+?> 
+   <!-- Principio Primer Row -->
     <div class="row">
+    <script src="../../assets/js/moduloUsuarios.js"></script>
         <!-- Vista Resumida Inventarios -->
         <div class="col-5 mr-3 row">
             <div class="row">
                 <div class="col p-3 m-2 dashbox">
-                    <h4><i class="fa-solid fa-trowel-bricks"></i></h4>
+                    <h4><i class="fa-solid fa-person-circle-check"></i></h4>
                     <span><h4>00</h4></span>
-                    <h3>Materiales en Inventario</h3>
+                    <h3>Operadores Disponibles</h3>
                 </div>
 
                 <div class="col p-3 m-2 dashbox">
@@ -20,7 +36,7 @@
                 <div class="col p-3 m-2 dashbox">
                     <h4><i class="fa-solid fa-user-group"></i></h4>
                     <span><h4>00</h4></span>
-                    <h3>Usuarios en Inventario</h3>
+                    <h3>Usuarios</h3>
                 </div>
 
                 <div class="col p-3 m-2 dashbox">
@@ -161,18 +177,14 @@
 
         <!-- Conjunto de Task Buttons -->
         <div class="col-3 container mx-3 gx-5 my-4 px-2 text-center">
+          
             <div class="taskbox my-3 p-2">
-            <form class="form" method="POST" action="../../controller/Login/loginController.php">
-                <span a href="#" class="texttask btn">Nuevo Usuario <i class="fa-solid fa-user-plus"></i></span>
-            </div>
-            <div class="taskbox my-3 p-2">
-                <span class="texttask btn">Nueva Herramienta <i class="fa-solid fa-screwdriver"></i></span>
-            </div>
-            <div class="taskbox my-3 p-2">
-                <span class="texttask btn">Nuevo Proyecto <i class="fa-solid fa-location-arrow"></i></span>
+            <li class="marginside"> <a href="#" onclick="cargarContenido('proyectos.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i>Nuevo Proyecto</a></li>
+          
             </div>
         </div>
-            </form>
+          
         <!-- Conjunto de Task Buttons -->
     </div>
     <!-- Fin Segundo Row -->
+    

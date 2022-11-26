@@ -19,3 +19,15 @@ Emilio Morales (28/10/2022) -> Se añadieron las mismas funcionalidades ya vista
 Fernando Perez (04/11/2022) -> Se añadio la tabla de personal, pendiente correccion de pequeños errores. 
 
 Emilio Morales (04/11/2022) -> Revision de tabla usuarios y modificación de base de datos.
+
+Emilio Morales (10/11/2022) -> Se trabajo tabla clientes.
+
+Emilio Morales (11/11/2022) -> Se trabajo tabla users.
+
+Emilio Morales (15/11/2022) -> Se completaron 3 tablas.
+
+Emilio Morales (19/11/2022) -> Se trabajo tabla clientes.
+
+Emilio Morales (25/11/2022) -> Culminando errores.
+
+Emilio Morales (26/11/2022) -> Trabajando Tabla Proyecto.

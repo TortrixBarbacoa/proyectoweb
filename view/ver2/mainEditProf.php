@@ -61,24 +61,27 @@ $result = $usrClass->getUsuarios();
          <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon2">Email</span>
             <input type="text" class="form-control" value="<?php echo $_SESSION['e_mail'];?>" aria-label="Disabled input example" disabled readonly aria-describedby="basic-addon1">
-       
+            
+            
         </div>
         <!-- Input Correo -->
-        
+          
+
     </div>
     <!-- Primer Grupo de Inputs -->
 </div>
 <!-- Top Input Box -->
 
 <!-- Bot Input Box -->
+
 <!-- Segundo Grupo de Inputs -->
 <div class="container profbox justify-content-center my-4 mx-2 py-1">
-<form class="form" method="POST" action="../../controller/ActualizarUsuario/actualizarUcontroller.php">
+<form class="form" method="POST" action="../../controller/ActualizarUsuario/registrarClienteController.php">
         <!-- Input Nombres -->
         <div class="container profbox my-2">
         <div class="input-group my-3">
-            <span class="input-group-text" for="innombre" id="basic-addon1">Nombres</span>
-            <input class="form-control" id="innombre"  placeholder="Digite solo sus nombres" aria-label="Nombres" aria-describedby="basic-addon1">
+            <span class="input-group-text" for="nombres_upd" id="basic-addon1">Nombres</span>
+            <input class="form-control" id="nombres"  placeholder="Digite solo sus nombres" aria-label="nombres" aria-describedby="basic-addon1">
            
         </div>
     </div>
@@ -88,7 +91,7 @@ $result = $usrClass->getUsuarios();
         <div class="container profbox my-2">
         <div class="input-group my-3">
             <span class="input-group-text"  for="inapellido" id="basic-addon1">Apellidos</span>
-            <input class="form-control" id="inapellido" placeholder="Digite sus apellidos" aria-label="Apellidos" aria-describedby="basic-addon1">
+            <input class="form-control" id="apellidos" placeholder="Digite sus apellidos" aria-label="apellidos" aria-describedby="basic-addon1">
            
           
         </div>
@@ -99,10 +102,10 @@ $result = $usrClass->getUsuarios();
     <div class="container profbox my-2">
         <div class="input-group my-3">
             <span class="input-group-text" id="basic-addon1" for="inpassword">Contraseña</span>
-            <input type="password" class="form-control"   id="inpassword" placeholder="Contraseña Nueva" aria-label="password" aria-describedby="basic-addon1">
+            <input type="password" class="form-control"   id="password" placeholder="Contraseña Nueva" aria-label="password" aria-describedby="basic-addon1">
            
         </div>
-        <button type="button" class="btn btn-primary" id="aactUsuario">Actualizar Usuario</button>
+        <button type="button" class="btn btn-primary" id="regC" name="regC" class="btn">REGISTRAR</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
     </div>
     
@@ -111,6 +114,12 @@ $result = $usrClass->getUsuarios();
     <!-- Input Contraseña -->
 </div>
 <!-- Segundo Grupo de Inputs -->
+
+
+
+
+
+
 <!-- Bot Input Box -->
 
 

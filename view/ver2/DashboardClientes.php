@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(!$_SESSION['user_id']){
-   
+    header("location: ../ver2/login.php");
 }
 
 
@@ -67,8 +67,8 @@ if(!$_SESSION['user_id']){
                 <li class="marginside active"> <a href="#" onclick="cargarContenido('login.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-server"></i>Iniciar Sesion</a></li>
                 <li class="marginside active"> <a href="#" onclick="cargarContenido('register.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-address-card"></i>Registrarse</a></li>
                 <li class="marginside active"> <a href="#" onclick="cargarContenido('mainHome.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-chalkboard"></i>Pagina Inicio</a></li>
-                <li class="marginside"> <a href="#" onclick="cargarContenido('mainDash.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i>Panel-Control</a></li>
-                <li class="marginside"> <a href="#" onclick="cargarContenido('herramientas.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</a></li>
+                <li class="marginside"> <a href="#" onclick="cargarContenido('mainDash.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-person-digging"></i>Materiales</a></li>
+                <li class="marginside"> <a href="#" class="text-decoration-none px-3 textside"><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</a></li>
                 <li class="marginside"> <a  href="#"  onclick="cargarContenido('trabajadores.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-users"></i> Personal</a></li>
                 <li class="marginside"> <a href="#"  class="text-decoration-none px-3 textside"><i class="fa-solid fa-compass-drafting"></i> Proyectos</a></li>
                 <li class="marginside"> <a href="#" onclick="cargarContenido('../ver2/Clientes.php');" class="text-decoration-none px-3 textside"><i class="fa-solid fa-address-book"></i> Clientes</a></li>
@@ -84,7 +84,7 @@ if(!$_SESSION['user_id']){
              </button>
              <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="#" onclick="cargarContenido('../Usuarios/usuariosView.php');">Listado Usuarios</a></li>
-             <li><a class="dropdown-item" href="#">Listado de proyectos</a></li>
+             <li><a class="dropdown-item" href="#">Listado de Tareas</a></li>
              <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Listado de Pendientes</a></li>
              </ul>
@@ -117,7 +117,7 @@ if(!$_SESSION['user_id']){
 
 
             <!-- Inicio Contenido Refrescable -->
-            <div class="col regimg container gx-5" style="width: 100%; height: auto;">
+            <div class="container gx-5" style="width: 100%; height: auto;">
             <div class="wrapper">
             <div class="container">
             

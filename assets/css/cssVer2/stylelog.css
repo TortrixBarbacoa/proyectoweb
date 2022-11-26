@@ -22,6 +22,14 @@ h2{
     color: var(--color-info-light);
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(51, 51, 219);
+}
+
 h3{
     font-family: 'Lato';
     margin-top: 5px;
@@ -34,16 +42,58 @@ body{
 }
 
 .logbox{
-    height: 550px;
+    height: 600px;
+    width: 1000px;
+    border-radius: 10px;
+}
+#bck{
+    background-image: url(https://fondosmil.com/fondo/57243.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bcklog{
+    background-image: url(https://besthqwallpapers.com/Uploads/26-3-2017/14789/thumb2-modern-architecture-skyscrapers-business-centers-modern-buildings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.regbox{
+    height: 630px;
     width: 1000px;
     border-radius: 10px;
 }
 
-.logimg{
+.bodyhome{
     height: 100%;
     width: 50%;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.redshift.autodesk.com/sites/7/2021/01/Lean-construction-infog-header.jpg);
+}
+
+.logimg{
+    
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
     background-image: url(../../img/loginbg.png);
 }
+
+.regimg{
+    height: 100%;
+    width: 50%;
+    background-image: url(https://img.freepik.com/fotos-premium/llenando-formulario-informacion-personal-documentos-carpeta-sobre-mesa-llenar-informacion-manuscrita-sobre-solicitante_494741-30724.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.imghome{
+    height: 100%;
+    width: 50%;
+    background-image: url(../../img/constr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
 
 .logimg2{
     height: 100%;

@@ -14,7 +14,7 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- JQUERY -->
-
+    <script src="../../assets/js/moduloUsuarios.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/cssVer2/stylelog.css">
     <!-- CSS -->
@@ -30,8 +30,9 @@
     <!-- Fontawesome -->
 </head>
 <body>
+    
     <!-- Main Container -->
-    <div class="main-container d-flex justify-content-center py-4">
+    <div id="bcklog" class="main-container d-flex justify-content-center py-4">
 
         <!-- Container Form Box -->
         <div class="container my-5 logbox row">
@@ -60,6 +61,12 @@
                     <label for="exampleFormControlInput1" class="form-label"><h2>Contraseña</h2></label>
                     <input type="Password" class="form-control" id="FormPass" placeholder="Ingresar Contraseña" name="inPassword">
                 </div>
+
+                <div class="mt-4 mb-5 mx-4">
+                    <label for="exampleFormControlInput1" class="form-label"><a href="register.php"><h2>No tienes cuenta?</h2></a></label>
+                    
+                </div>
+
                 <!-- Form Contraseña -->
 
                 <!-- Botón Ingresar -->
